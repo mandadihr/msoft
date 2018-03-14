@@ -6,7 +6,7 @@ import { MealsComponent } from './components/meals/meals.component';
 import { DataService } from './service/data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { MealsDetailsComponent } from './meals-details/meals-details.component';
-
+import { StorageServiceModule } from 'angular-webstorage-service';
 
 
 @NgModule({
@@ -18,7 +18,9 @@ import { MealsDetailsComponent } from './meals-details/meals-details.component';
   imports: [
     BrowserModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StorageServiceModule
+
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

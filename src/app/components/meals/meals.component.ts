@@ -32,18 +32,21 @@ export class MealsComponent implements OnInit {
 
   }
 
-
-
-  myEvent(){
-
-    for(var i=0; i<this.meals.length;i++){
-      if(this.meals[i].strMeal="Dal Fry"){
-        console.log(this.meals[i]);
-
-        }
-
-    }
+  ngDestroy(){
+    localStorage.removeItem('meals');
   }
+
+
+
+  // myEvent(){
+
+  //   for(var i=0; i<this.meals.length;i++){
+  //     if(this.meals[i].strMeal="Dal Fry"){
+  //       console.log(this.meals[i]);
+  //       }
+
+  //   }
+  // }
 
 
 }

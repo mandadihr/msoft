@@ -7,7 +7,7 @@ import { MealsDetailsComponent } from './meals-details/meals-details.component'
 
 const routes: Routes = [
   {path: 'meals', component: MealsComponent},
-  {path: 'meals/meals-details', component: MealsDetailsComponent}
+  {path: 'meals/meals-details/:index', component: MealsDetailsComponent}
 ];
 
 @NgModule({

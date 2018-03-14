@@ -13,7 +13,7 @@
       </thead>
 
     <tbody>
-      <tr *ngFor="let meal of meals">
+      <tr *ngFor="let meal of meals; index as i">
         <td>
           <ul>
           <li><strong><em>{{meal.strMeal}}</em></strong></li>
@@ -21,8 +21,8 @@
           <li><strong>{{meal.strArea}}</strong></li>
           </ul>
         </td>
-        <td><img src="{{meal.strMealThumb}}" (click)="myEvent()" class="img-thumbnail" width="600" height="400"></td>
-        <td><a routerLink="meals-details" class="btn btn-primary active" role="button" routerLinkActive="active">About</a></td>
+        <td><img src="{{meal.strMealThumb}}" class="img-thumbnail" width="600" height="400"></td>
+        <td><a routerLink="meals-details/{{i}}" class="btn btn-primary active" role="button" routerLinkActive="active" >About</a></td>
       </tr>
     </tbody>
   </table>
